@@ -4,7 +4,8 @@ class AirportsController < ApplicationController
   # GET /airports
   # GET /airports.json
   def index
-    @airports = Airport.all
+    #@airports = Airport.all
+    @airports = Airport.all.paginate(page: params[:page], per_page: 100).order('pid');
   end
 
   # GET /airports/1
@@ -69,6 +70,6 @@ class AirportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def airport_params
-      params.require(:airport).permit(:id, :name, :city, :country, :iata_faa, :icao, :latitude, :longitude, :altitude, :timezone, :dst, :tz_databse)
+      params[:airport]
     end
 end

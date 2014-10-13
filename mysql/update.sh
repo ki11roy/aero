@@ -11,4 +11,4 @@ cd -
 cp update.sql /tmp/iana
 mysql -u air --password=VeryThinAir air < /tmp/iana/update.sql 
 
-rm -rf /tmp/iana
+#rm -rf /tmp/iana

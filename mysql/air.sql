@@ -19,12 +19,12 @@
 -- Table structure for table `airline`
 --
 
-DROP TABLE IF EXISTS `airline`;
+DROP TABLE IF EXISTS `airlines`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `airline` (
+CREATE TABLE `airlines` (
   `lid` int(11) NOT NULL,
-  `namel` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
   `alias` varchar(45) DEFAULT NULL,
   `iata` varchar(2) DEFAULT NULL,
   `icao` varchar(3) DEFAULT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `airline` (
 -- Table structure for table `airport`
 --
 
-DROP TABLE IF EXISTS `airport`;
+DROP TABLE IF EXISTS `airports`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `airport` (
+CREATE TABLE `airports` (
   `pid` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
   `city` varchar(45) DEFAULT NULL,
@@ -63,10 +63,10 @@ CREATE TABLE `airport` (
 -- Table structure for table `route`
 --
 
-DROP TABLE IF EXISTS `route`;
+DROP TABLE IF EXISTS `routes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `route` (
+CREATE TABLE `routes` (
   `rid` int(11) NOT NULL AUTO_INCREMENT,
   `airline` varchar(3) DEFAULT NULL,
   `airline_id` int(11) DEFAULT NULL,

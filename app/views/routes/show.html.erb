@@ -1,49 +1,4 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Airline:</strong>
-  <%= @route.airline %>
-</p>
-
-<p>
-  <strong>Airline:</strong>
-  <%= @route.airline_id %>
-</p>
-
-<p>
-  <strong>Source airport:</strong>
-  <%= @route.source_airport %>
-</p>
-
-<p>
-  <strong>Source airport:</strong>
-  <%= @route.source_airport_id %>
-</p>
-
-<p>
-  <strong>Destination airport:</strong>
-  <%= @route.destination_airport %>
-</p>
-
-<p>
-  <strong>Destination airport:</strong>
-  <%= @route.destination_airport_id %>
-</p>
-
-<p>
-  <strong>Codeshare:</strong>
-  <%= @route.codeshare %>
-</p>
-
-<p>
-  <strong>Stops:</strong>
-  <%= @route.stops %>
-</p>
-
-<p>
-  <strong>Equipment:</strong>
-  <%= @route.equipment %>
-</p>
-
 <%= link_to 'Edit', edit_route_path(@route) %> |
 <%= link_to 'Back', routes_path %>

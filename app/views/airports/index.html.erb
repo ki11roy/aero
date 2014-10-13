@@ -1,20 +1,8 @@
 <h1>Listing airports</h1>
-
+<%= will_paginate @airports %>
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>Iata faa</th>
-      <th>Icao</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Altitude</th>
-      <th>Timezone</th>
-      <th>Dst</th>
-      <th>Tz databse</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,18 +10,18 @@
   <tbody>
     <% @airports.each do |airport| %>
       <tr>
-        <td><%= airport.id %></td>
+        <td><%= airport.pid %></td>
         <td><%= airport.name %></td>
         <td><%= airport.city %></td>
         <td><%= airport.country %></td>
-        <td><%= airport.iata_faa %></td>
+        <td><%= airport.iata %></td>
         <td><%= airport.icao %></td>
         <td><%= airport.latitude %></td>
         <td><%= airport.longitude %></td>
         <td><%= airport.altitude %></td>
         <td><%= airport.timezone %></td>
         <td><%= airport.dst %></td>
-        <td><%= airport.tz_databse %></td>
+        <td><%= airport.timezone_text %></td>
         <td><%= link_to 'Show', airport %></td>
         <td><%= link_to 'Edit', edit_airport_path(airport) %></td>
         <td><%= link_to 'Destroy', airport, method: :delete, data: { confirm: 'Are you sure?' } %></td>

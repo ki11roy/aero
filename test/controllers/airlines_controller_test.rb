@@ -18,7 +18,7 @@ class AirlinesControllerTest < ActionController::TestCase
 
   test "should create airline" do
     assert_difference('Airline.count') do
-      post :create, airline: { active: @airline.active, alias: @airline.alias, callsign: @airline.callsign, country: @airline.country, iata: @airline.iata, icao: @airline.icao, id: @airline.id, name: @airline.name }
+      post :create, airline: {  }
     end
 
     assert_redirected_to airline_path(assigns(:airline))
@@ -35,7 +35,7 @@ class AirlinesControllerTest < ActionController::TestCase
   end
 
   test "should update airline" do
-    patch :update, id: @airline, airline: { active: @airline.active, alias: @airline.alias, callsign: @airline.callsign, country: @airline.country, iata: @airline.iata, icao: @airline.icao, id: @airline.id, name: @airline.name }
+    patch :update, id: @airline, airline: {  }
     assert_redirected_to airline_path(assigns(:airline))
   end
 

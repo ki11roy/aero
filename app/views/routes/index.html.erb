@@ -3,15 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Airline</th>
-      <th>Airline</th>
-      <th>Source airport</th>
-      <th>Source airport</th>
-      <th>Destination airport</th>
-      <th>Destination airport</th>
-      <th>Codeshare</th>
-      <th>Stops</th>
-      <th>Equipment</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,15 +10,6 @@
   <tbody>
     <% @routes.each do |route| %>
       <tr>
-        <td><%= route.airline %></td>
-        <td><%= route.airline_id %></td>
-        <td><%= route.source_airport %></td>
-        <td><%= route.source_airport_id %></td>
-        <td><%= route.destination_airport %></td>
-        <td><%= route.destination_airport_id %></td>
-        <td><%= route.codeshare %></td>
-        <td><%= route.stops %></td>
-        <td><%= route.equipment %></td>
         <td><%= link_to 'Show', route %></td>
         <td><%= link_to 'Edit', edit_route_path(route) %></td>
         <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>

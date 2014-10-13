@@ -4,7 +4,8 @@ class AirlinesController < ApplicationController
   # GET /airlines
   # GET /airlines.json
   def index
-    @airlines = Airline.all
+#    @airlines = Airline.all
+     @airlines = Airline.all.paginate(page: params[:page], per_page: 100).order('lid');
   end
 
   # GET /airlines/1
@@ -69,6 +70,6 @@ class AirlinesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def airline_params
-      params.require(:airline).permit(:id, :name, :alias, :iata, :icao, :callsign, :country, :active)
+      params[:airline]
     end
 end
