@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :airports
 
-  resources :airlines
+  resources :airlines, :only => [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

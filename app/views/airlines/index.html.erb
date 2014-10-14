@@ -19,8 +19,6 @@
         <td><%= airline.country %></td>
         <td><%= airline.active %></td>
         <td><%= link_to 'Show', airline %></td>
-        <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
-        <td><%= link_to 'Destroy', airline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +26,3 @@
 
 <br>
 
-<%= link_to 'New Airline', new_airline_path %>
