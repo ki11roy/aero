@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "airlines", primary_key: "lid", force: true do |t|
-    t.string "namel",    limit: 45
+    t.string "name",     limit: 45
     t.string "alias",    limit: 45
     t.string "iata",     limit: 2
     t.string "icao",     limit: 3
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "country",       limit: 45
     t.string  "iata",          limit: 45
     t.string  "icao",          limit: 45
-    t.decimal "latitude",                 precision: 10, scale: 0
-    t.decimal "longitude",                precision: 10, scale: 0
-    t.decimal "altitude",                 precision: 10, scale: 0
-    t.decimal "timezone",                 precision: 10, scale: 0
+    t.decimal "latitude",                 precision: 9, scale: 6
+    t.decimal "longitude",                precision: 9, scale: 6
+    t.decimal "altitude",                 precision: 6, scale: 0
+    t.decimal "timezone",                 precision: 4, scale: 1
     t.string  "dst",           limit: 1
     t.string  "timezone_text", limit: 45
   end
