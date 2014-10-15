@@ -8,6 +8,16 @@
   </thead>
 
   <tbody>
+	<tr>
+        <td><%= link_to_sorted 'Id', :lid %></td>
+        <td><%= link_to_sorted 'Name', :name %></td>
+        <td><%= link_to_sorted 'Alias', :alias %></td>
+        <td><%= link_to_sorted 'IATA', :iata %></td>
+        <td><%= link_to_sorted 'ICAO', :icao %></td>
+        <td><%= link_to_sorted 'Callsign', :callsign %></td>
+        <td><%= link_to_sorted 'Country', :country %></td>
+        <td><%= link_to_sorted 'Active', :active %></td>
+	</tr>
     <% @airlines.each do |airline| %>
       <tr>
         <td><%= airline.lid %></td>

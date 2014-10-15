@@ -4,8 +4,7 @@ class AirlinesController < ApplicationController
   # GET /airlines
   # GET /airlines.json
   def index
-#    @airlines = Airline.all
-     @airlines = Airline.all.paginate(page: params[:page], per_page: 100).order('lid');
+     @airlines = Airline.sorted(params[:sort], "lid ASC").page(params[:page])
   end
 
   # GET /airlines/1

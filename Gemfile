@@ -41,3 +41,6 @@ gem 'spring',        group: :development
 gem 'will_paginate', '~> 3.0'
 
 gem 'therubyracer'
+
+gem 'sorted', '~> 0.4.3'
+
