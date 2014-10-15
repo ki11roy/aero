@@ -4,7 +4,8 @@ class RoutesController < ApplicationController
   # GET /routes
   # GET /routes.json
   def index
-    @routes = Route.all
+    #@routes = Route.all
+    @routes = Route.all.paginate(page: params[:page], per_page: 100).order('rid');
   end
 
   # GET /routes/1

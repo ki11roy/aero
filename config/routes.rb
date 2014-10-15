@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :routes
+  resources :routes, :only => [:index, :show]
 
-  resources :airports
+  resources :airports, :only => [:index, :show]
 
   resources :airlines, :only => [:index, :show]
 

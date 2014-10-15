@@ -23,8 +23,6 @@
         <td><%= airport.dst %></td>
         <td><%= airport.timezone_text %></td>
         <td><%= link_to 'Show', airport %></td>
-        <td><%= link_to 'Edit', edit_airport_path(airport) %></td>
-        <td><%= link_to 'Destroy', airport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +30,3 @@
 
 <br>
 
-<%= link_to 'New Airport', new_airport_path %>
