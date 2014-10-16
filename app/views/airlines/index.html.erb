@@ -1,38 +1,33 @@
 <h1>Listing airlines</h1>
-<%= will_paginate @airlines %>
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= will_paginate @airlines, renderer: BootstrapPagination::Rails %>
+<div class="table-responsive">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= link_to_sorted 'Id', :lid %></td>
+        <th><%= link_to_sorted 'Name', :name %></td>
+        <th><%= link_to_sorted 'Alias', :alias %></td>
+        <th><%= link_to_sorted 'IATA', :iata %></td>
+        <th><%= link_to_sorted 'ICAO', :icao %></td>
+        <th><%= link_to_sorted 'Callsign', :callsign %></td>
+        <th><%= link_to_sorted 'Country', :country %></td>
+        <th><%= link_to_sorted 'Active', :active %></td>
+      </tr>
+    </thead>
 
-  <tbody>
-	<tr>
-        <td><%= link_to_sorted 'Id', :lid %></td>
-        <td><%= link_to_sorted 'Name', :name %></td>
-        <td><%= link_to_sorted 'Alias', :alias %></td>
-        <td><%= link_to_sorted 'IATA', :iata %></td>
-        <td><%= link_to_sorted 'ICAO', :icao %></td>
-        <td><%= link_to_sorted 'Callsign', :callsign %></td>
-        <td><%= link_to_sorted 'Country', :country %></td>
-        <td><%= link_to_sorted 'Active', :active %></td>
-	</tr>
+    <tbody>
     <% @airlines.each do |airline| %>
       <tr>
-        <td><%= airline.lid %></td>
-        <td><%= airline.name %></td>
-        <td><%= airline.alias %></td>
-        <td><%= airline.iata %></td>
-        <td><%= airline.icao %></td>
-        <td><%= airline.callsign %></td>
-        <td><%= airline.country %></td>
-        <td><%= airline.active %></td>
-        <td><%= link_to 'Show', airline %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+      <td><%= link_to airline.name, airline %></td>
+      <td><%= airline.name %></td>
+      <td><%= airline.alias %></td>
+      <td><%= airline.iata %></td>
+      <td><%= airline.icao %></td>
+      <td><%= airline.callsign %></td>
+      <td><%= airline.country %></td>
+      <td><%= airline.active %></td>
+    </tr>
+  <% end %>
+    </tbody>
+  </table>
+</div>

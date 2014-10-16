@@ -44,3 +44,9 @@ gem 'therubyracer'
 
 gem 'sorted', '~> 0.4.3'
 
+gem 'bootstrap-sass',       '3.2.0.0'
+
+gem 'will_paginate-bootstrap'
+
+gem 'meta-tags'
+
