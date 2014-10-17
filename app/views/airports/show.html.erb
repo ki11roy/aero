@@ -1,3 +1,26 @@
 <p id="notice"><%= notice %></p>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</td>
+        <th>Value</td>
+      </tr>
+    </thead>
 
-<%= link_to 'Back', airports_path %>
+    <tbody>
+    <tr><td>Name</td><td><%= @airport.name %></td></tr>
+    <tr><td>City</td><td><%= @airport.city %></td></tr>
+    <tr><td>Country</td><td><%= @airport.country %></td></tr>
+    <tr><td>IATA</td><td><%= @airport.iata %></td></tr>
+    <tr><td>ICAO</td><td><%= @airport.icao %></td></tr>
+    <tr><td>Latitude</td><td><%= @airport.latitude %></td></tr>
+    <tr><td>Longitude</td><td><%= @airport.longitude %></td></tr>
+    <tr><td>Altitude</td><td><%= @airport.altitude %></td></tr>
+    <tr><td>Timezone</td><td><%= @airport.timezone %></td></tr>
+    <tr><td>DST</td><td><%= @airport.dst %></td></tr>
+    <tr><td>Timezone(text)</td><td><%= @airport.timezone_text %></td></tr>
+    </tbody>
+  </table>
+</div>
+

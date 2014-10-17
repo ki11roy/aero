@@ -1,3 +1,21 @@
 <p id="notice"><%= notice %></p>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</td>
+        <th>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr><td>Name</td><td><%= @airline.name %></td></tr>
+    <tr><td>Alias</td><td><%= @airline.alias %></td></tr>
+    <tr><td>IATA</td><td><%= @airline.iata %></td></tr>
+    <tr><td>ICAO</td><td><%= @airline.icao %></td></tr>
+    <tr><td>Callsign</td><td><%= @airline.callsign %></td></tr>
+    <tr><td>Country</td><td><%= @airline.country %></td></tr>
+    <tr><td>Active</td><td><%= @airline.active %></td></tr>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'Back', airlines_path %>

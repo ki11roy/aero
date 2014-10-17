@@ -11,6 +11,7 @@ class AirportsController < ApplicationController
   # GET /airports/1
   # GET /airports/1.json
   def show
+    @airport = Airport.find(params[:id])
   end
 
   # GET /airports/new

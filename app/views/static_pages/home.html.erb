@@ -1,2 +1,8 @@
 <% provide(:title, "Home") %>
-<h1>Home</h1>
+<div class="container">
+  <h2>Search airport by code</h2>
+  <%= form_tag "/search" , { :class => 'form-inline', :role => 'form' } do %>
+    <%= text_field_tag "search", nil, placeholder: "Enter code, country or airport name", autocomplete: :off %>
+  <%= submit_tag "Search", name: nil, class: "btn btn-default" %>   
+  <% end %>
+</div>

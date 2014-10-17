@@ -5,6 +5,8 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
+cp csv2json.pl /usr/bin
+
 mkdir /usr/bin/air
 cp update.sh /usr/bin/air
 

@@ -50,3 +50,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'meta-tags'
 
+gem 'rack-contrib'
+
+gem 'soulmate', :require => 'soulmate/server'
+

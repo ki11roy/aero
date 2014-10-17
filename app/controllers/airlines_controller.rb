@@ -10,6 +10,7 @@ class AirlinesController < ApplicationController
   # GET /airlines/1
   # GET /airlines/1.json
   def show
+    @airline = Airline.find(params[:id])
   end
 
   # GET /airlines/new

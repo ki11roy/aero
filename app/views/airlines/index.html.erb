@@ -4,7 +4,6 @@
     <table class="table table-hover">
     <thead>
       <tr>
-        <th><%= link_to_sorted 'Id', :lid %></td>
         <th><%= link_to_sorted 'Name', :name %></td>
         <th><%= link_to_sorted 'Alias', :alias %></td>
         <th><%= link_to_sorted 'IATA', :iata %></td>
@@ -19,7 +18,6 @@
     <% @airlines.each do |airline| %>
       <tr>
       <td><%= link_to airline.name, airline %></td>
-      <td><%= airline.name %></td>
       <td><%= airline.alias %></td>
       <td><%= airline.iata %></td>
       <td><%= airline.icao %></td>
