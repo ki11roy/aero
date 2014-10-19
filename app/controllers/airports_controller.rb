@@ -1,10 +1,22 @@
 class AirportsController < ApplicationController
   before_action :set_airport, only: [:show, :edit, :update, :destroy]
 
+  def search
+    if params.has_key?(:search_cache)
+      @airports = JSON.parse(Rails.cache.read(params[:search_cache]))
+      logger.debug "********** READ CACHE " 
+      @airports = @airports.paginate(:page => params[:page])
+    else  
+      @cache = SecureRandom.hex 
+      Rails.cache.write(@cache, Airport.search(params[:search]).order("pid ASC").to_json, time_to_idle: 10.seconds, timeToLive: 60.seconds)  
+      logger.debug "********** WRITE CACHE"
+      redirect_to [airports_url,'/search/',@cache].join
+    end
+  end
+
   # GET /airports
   # GET /airports.json
   def index
-    #@airports = Airport.all
     @airports = Airport.sorted(params[:sort], "pid ASC").page(params[:page])
   end
 

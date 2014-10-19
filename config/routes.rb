@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   mount Soulmate::Server, :at => "/autocomplete"
 
   root             'static_pages#home'
@@ -7,14 +6,19 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
 
-
   resources :routes, :only => [:index, :show]
   resources :airports, :only => [:index, :show]
+  
   resources :airlines, :only => [:index, :show]
  
   get 'airports' => 'airports#index'
   get 'airlines' => 'airlines#index'
   get 'routes' => 'routes#index'
+
+  match 'airports/search' => 'airports#search', :via => :post
+  get 'airports/search/:search_cache' => 'airports#search'
+
+ # post 'search' => 'airports#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

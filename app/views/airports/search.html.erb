@@ -1,4 +1,4 @@
-<h1>Listing airports</h1>
+<h1>Search results</h1>
 <%= will_paginate @airports, renderer: BootstrapPagination::Rails %>
 <div class="table-responsive">
   <table class="table table-hover table-striped">
@@ -17,13 +17,13 @@
     <tbody>
     <% @airports.each do |airport| %>
       <tr>
-      <td><%= link_to airport.name, airport %></td>
-      <td><%= airport.city %></td>
-      <td><%= airport.country %></td>
-      <td><%= airport.iata %></td>
-      <td><%= airport.icao %></td>
-      <td><%= airport.timezone %></td>
-      <td><%= airport.timezone_text %></td>
+      <td><%= link_to airport['name'] %></td>
+      <td><%= airport['city'] %></td>
+      <td><%= airport['country'] %></td>
+      <td><%= airport['iata'] %></td>
+      <td><%= airport['icao'] %></td>
+      <td><%= airport['timezone'] %></td>
+      <td><%= airport['timezone_text'] %></td>
     </tr>
   <% end %>
     </tbody>

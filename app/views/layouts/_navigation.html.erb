@@ -1,8 +1,8 @@
 <!-- Static navbar -->
-<div class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -10,7 +10,7 @@
       </button>
       <%= link_to "aeronames", root_path, class: 'navbar-brand' %>
     </div>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "List Airports", airports_path %></li>
         <li><%= link_to "List Airlines", airlines_path %></li>

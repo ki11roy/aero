@@ -54,3 +54,7 @@ gem 'rack-contrib'
 
 gem 'soulmate', :require => 'soulmate/server'
 
+gem 'actionpack-page_caching'
+
+gem 'actionpack-action_caching'
+
